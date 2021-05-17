@@ -34,7 +34,8 @@ int main() {
     // of a C string with a length of 200, i.e., strlen(msg) == 200).
     char recent_msg[201];
 
-    sockfd = socket(AF_INET, SOCK_DGRAM, 0);                                                if (sockfd < 0) {
+    sockfd = socket(AF_INET, SOCK_DGRAM, 0);                                             
+    if (sockfd < 0) {
         printf("socket() error: %s.\n", strerror(errno));
         return -1;
     }
